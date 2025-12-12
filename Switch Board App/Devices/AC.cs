@@ -5,7 +5,7 @@ using Switch_Board_App.Interfaces;
 
 namespace Switch_Board_App.Devices
 {
-    internal class AC : IDevice
+	internal class AC : IDevice
 	{
 
 		public string Name { get; set; } = "AC";
@@ -13,7 +13,7 @@ namespace Switch_Board_App.Devices
 		public void TurnOff()
 		{
 			IsDeviceOn = false;
-		}	
+		}
 		public void TurnOn()
 		{
 			IsDeviceOn = true;

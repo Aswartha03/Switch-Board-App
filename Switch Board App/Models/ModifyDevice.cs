@@ -5,8 +5,8 @@ using Switch_Board_App.Interfaces;
 
 namespace Switch_Board_App.Models
 {
-    static internal class ModifyDevice
-    {
+	static internal class ModifyDevice
+	{
 		static public void Modify(IDevice device)
 		{
 			string optionToUser = device.IsDeviceOn ? "Off" : "On";

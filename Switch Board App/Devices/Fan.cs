@@ -8,22 +8,22 @@ namespace Switch_Board_App.Devices
     internal class Fan : IDevice
     {
 
-        public string Name { get; set; } = "Fan";   
-		public bool IsDeviceOn { get; set; } = false;
+        public string Name { get; set; } = "Fan";
+        public bool IsDeviceOn { get; set; } = false;
 
-		public void TurnOff() 
+        public void TurnOff()
         {
             IsDeviceOn = false;
-		}
+        }
 
         public void TurnOn()
         {
-            IsDeviceOn = true; 
-		}
+            IsDeviceOn = true;
+        }
         public string DisplayStatus()
         {
             string status = IsDeviceOn ? "On" : "Off";
             return $"Fan is {status}";
-		}
-	}
+        }
+    }
 }

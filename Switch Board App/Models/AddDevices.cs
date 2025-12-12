@@ -6,11 +6,11 @@ using Switch_Board_App.Interfaces;
 
 namespace Switch_Board_App.Models
 {
-    static internal class AddDevices
-    {
+	static internal class AddDevices
+	{
 		static public void AddToDevices(int fans, int acs, int bulbs, List<IDevice> devices)
 		{
-			
+
 			while (fans > 0)
 			{
 				devices.Add(new Fan());
@@ -26,7 +26,7 @@ namespace Switch_Board_App.Models
 				devices.Add(new Bulb());
 				bulbs--;
 			}
-			
+
 		}
 	}
 }

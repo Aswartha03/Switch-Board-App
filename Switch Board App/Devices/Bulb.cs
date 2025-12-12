@@ -5,12 +5,12 @@ using Switch_Board_App.Interfaces;
 
 namespace Switch_Board_App.Devices
 {
-    internal class Bulb : IDevice
+	internal class Bulb : IDevice
 	{
 
 		public string Name { get; set; } = "BULB";
 		public bool IsDeviceOn { get; set; } = false;
-		
+
 		public void TurnOff()
 		{
 			IsDeviceOn = false;

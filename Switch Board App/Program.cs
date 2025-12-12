@@ -12,12 +12,14 @@ namespace Switch_Board_App
         static void Main(string[] args)
         {
 
-		Console.WriteLine("Switch Board Console Application : \n ");
+            Console.WriteLine("Switch Board Console Application : \n ");
 
             // Store all Devices :
             List<IDevice> devices = new List<IDevice>();
 
             Console.WriteLine("Adding Devices to Switch Board...");
+
+            // Asking user for number of devices to add
 
             Console.Write("Number of Fans to add: ");
             int numberOfFans = Convert.ToInt32(Console.ReadLine());
@@ -29,9 +31,9 @@ namespace Switch_Board_App
             int numberOfBulbs = Convert.ToInt32(Console.ReadLine());
 
 
-			int totalDevices = numberOfBulbs + numberOfFans + numberOfAcs;
-			// Adding devices to the list
-			AddDevices.AddToDevices(numberOfFans, numberOfAcs, numberOfBulbs, devices);
+            int totalDevices = numberOfBulbs + numberOfFans + numberOfAcs;
+            // Adding devices to the list
+            AddDevices.AddToDevices(numberOfFans, numberOfAcs, numberOfBulbs, devices);
 
             int choice = 0;
 
@@ -68,7 +70,7 @@ namespace Switch_Board_App
                     break;
                 }
             }
-			while (choice <= totalDevices+1);
+            while (choice <= totalDevices + 1);
 
         }
     }

@@ -5,16 +5,15 @@ using Switch_Board_App.Interfaces;
 
 namespace Switch_Board_App.Models
 {
-    static internal class DisplayDevices
+    static class DisplayDevices
     {
 		static public void RetriveDevices(List<IDevice> devices)
 		{
-			int currDeviceNumber = 1;
-			foreach (IDevice device in devices)
+			for( int i=0;i< devices.Count; i++)
 			{
+				IDevice device = devices[i];
 				string deviceStatus = device.DisplayStatus();
-				Console.WriteLine($"{currDeviceNumber} . {deviceStatus}");
-				currDeviceNumber++;
+				Console.WriteLine($"{i + 1} . {deviceStatus}");
 			}
 		}
 	}

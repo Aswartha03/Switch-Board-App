@@ -28,10 +28,10 @@ namespace Switch_Board_App
             Console.Write("Number of Bulbs to add : ");
             int numberOfBulbs = Convert.ToInt32(Console.ReadLine());
 
-            int totalDevices = numberOfBulbs + numberOfFans + numberOfAcs;
 
-            // Adding devices to the list
-            AddDevices.AddToDevices(numberOfFans, numberOfAcs, numberOfBulbs, devices);
+			int totalDevices = numberOfBulbs + numberOfFans + numberOfAcs;
+			// Adding devices to the list
+			AddDevices.AddToDevices(numberOfFans, numberOfAcs, numberOfBulbs, devices);
 
             int choice = 0;
 
@@ -46,19 +46,23 @@ namespace Switch_Board_App
 
                 choice = Convert.ToInt32(Console.ReadLine());
 
-
+                // Choice is Valid
                 if (choice <= totalDevices)
                 {
                     IDevice selectedDevice = devices[choice - 1];
 
                     ModifyDevice.Modify(selectedDevice);
                 }
+
+                // User try to exit the app
                 else if (choice == totalDevices + 1)
                 {
                     Console.WriteLine("Exiting the Program");
                     break;
                 }
+
                 else
+                // Invalid Case
                 {
                     Console.WriteLine("Invalid Case , Exiting the Program");
                     break;

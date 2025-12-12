@@ -19,7 +19,9 @@ namespace Switch_Board_App
 
             Console.WriteLine("Adding Devices to Switch Board...");
 
-            Console.Write("Number of Fans to add: ");
+			// Asking user for number of devices to add
+
+			Console.Write("Number of Fans to add: ");
             int numberOfFans = Convert.ToInt32(Console.ReadLine());
 
             Console.Write("Number of Acs to add: ");
@@ -37,7 +39,7 @@ namespace Switch_Board_App
 
             do
             {
-                Console.WriteLine("Device Menu : \n");
+                Console.WriteLine("Device Menu : \n"); 
 
                 DisplayDevices.RetriveDevices(devices);
                 Console.WriteLine($"{totalDevices + 1}. Exit");

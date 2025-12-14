@@ -1,13 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Switch_Board_App.Devices;
-using Switch_Board_App.Interfaces;
 
-namespace Switch_Board_App.Models
+using Switch_Board_App.Interfaces;
+using Switch_Board_App.Models;
+
+namespace Switch_Board_App.Services
 {
 	static internal class AddDevices
 	{
+
+		
 		static public void AddToDevices(int fans, int acs, int bulbs, List<IDevice> devices)
 		{
 

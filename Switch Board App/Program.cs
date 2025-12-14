@@ -1,26 +1,24 @@
 ﻿using System.Runtime.CompilerServices;
 using System.Xml.Serialization;
-using Switch_Board_App.Devices;
+
 using Switch_Board_App.Interfaces;
-using Switch_Board_App.Models;
+using Switch_Board_App.Services;
 
 namespace Switch_Board_App
 {
     internal class Program
     {
-
-        static void Main(string[] args)
+		static void Main(string[] args)
         {
 
-            Console.WriteLine("Switch Board Console Application : \n ");
+           Console.WriteLine("Welcome to Switch Board App");
 
-            // Store all Devices :
-            List<IDevice> devices = new List<IDevice>();
+			// Store all Devices :
+			List<IDevice> devices = new List<IDevice>();
 
-            Console.WriteLine("Adding Devices to Switch Board...");
+			Console.WriteLine("Adding Devices to Switch Board..."); 
 
             // Asking user for number of devices to add
-
             Console.Write("Number of Fans to add: ");
             int numberOfFans = Convert.ToInt32(Console.ReadLine());
 
@@ -35,7 +33,7 @@ namespace Switch_Board_App
             // Adding devices to the list
             AddDevices.AddToDevices(numberOfFans, numberOfAcs, numberOfBulbs, devices);
 
-            int choice = 0;
+			int choice = 0;
 
             do
             {
@@ -52,8 +50,7 @@ namespace Switch_Board_App
                 if (choice <= totalDevices)
                 {
                     IDevice selectedDevice = devices[choice - 1];
-
-                    ModifyDevice.Modify(selectedDevice);
+					ModifyDevice.Modify(selectedDevice);
                 }
 
                 // User try to exit the app
@@ -63,7 +60,7 @@ namespace Switch_Board_App
                     break;
                 }
 
-                else
+                else 
                 // Invalid Case
                 {
                     Console.WriteLine("Invalid Case , Exiting the Program");

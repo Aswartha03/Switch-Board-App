@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Switch_Board_App.Interfaces
 {
-    interface IDevice
+    public interface IDevice
 	{
         public string Name { get; set; }
         public bool IsDeviceOn { get; set; }

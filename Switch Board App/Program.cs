@@ -31,7 +31,7 @@ namespace Switch_Board_App
 
             int totalDevices = numberOfBulbs + numberOfFans + numberOfAcs;
             // Adding devices to the list
-            AddDevices.AddToDevices(numberOfFans, numberOfAcs, numberOfBulbs, devices);
+            DeviceServices.AddDevices(numberOfFans, numberOfAcs, numberOfBulbs, devices);
 
 			int choice = 0;
 
@@ -39,8 +39,9 @@ namespace Switch_Board_App
             {
                 Console.WriteLine("Device Menu : \n");
 
-                DisplayDevices.RetriveDevices(devices);
-                Console.WriteLine($"{totalDevices + 1}. Exit");
+				// Retrieving all devices
+				DeviceServices.RetriveDevices(devices);
+				Console.WriteLine($"{totalDevices + 1}. Exit");
 
                 Console.WriteLine("Enter Your Choice : ");
 
@@ -50,7 +51,8 @@ namespace Switch_Board_App
                 if (choice <= totalDevices)
                 {
                     IDevice selectedDevice = devices[choice - 1];
-					ModifyDevice.Modify(selectedDevice);
+					// Modifying Device Status
+					DeviceServices.ModifyDeviceStatus(selectedDevice);
                 }
 
                 // User try to exit the app

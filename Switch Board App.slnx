@@ -1,3 +1,4 @@
 <Solution>
-  <Project Path="Switch Board App/Switch_Board_App.csproj" />
+  <Project Path="Switch Board App/SwitchBoard.App.csproj" />
+  <Project Path="SwitchBoard.Core/SwitchBoard.Core.csproj" Id="46a289aa-4d9f-4c0e-a16a-8d13c924b8e3" />
 </Solution>
